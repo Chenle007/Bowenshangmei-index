@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博文尚美</title>
+    <link rel="stylesheet" href="css/css.css">
+    <style>
+        #banner {
+            position: relative;
+        }
+
+        #banner .banner-list {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        #banner .banner-list li {
+            width: 100%;
+            height: 100%;
+            background: center 0 no-repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        #banner .banner-list li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #banner .banner-list li.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        #banner .banner-btn {
+            width: 100%;
+            position: absolute;
+            bottom: 19px;
+            z-index: 20;
+            font-size: 0;
+            text-align: center
+        }
+
+        #banner .banner-btn li {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border: white 1px solid;
+            box-sizing: border-box;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        #banner .banner-btn li.active {
+            background: white;
+        }
+
+        #con {
+            overflow: hidden;
+            min-height: 407px;
+        }
+
+        #con .con-list {
+            text-align: center;
+            margin-top: 34px;
+        }
+
+        #con .con-list li {
+            width: 250px;
+            float: left;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        #con .con-list li:hover{
+            color: #66c5b4;
+        }
+        #con .con-list li:hover img{
+            animation: move 0.3s;
+        }
+        @keyframes move {
+            0% {transform: translate(0,0) ; opacity: 1;}
+            60% {transform: translate(0,-50px) ; opacity: 0;}
+            61% { transform: translate(0,50px);opacity: 0; }
+            100% { transform: translate(0,0);opacity: 1;}
+        }
+
+        #con .con-list div {
+            width: 102px;
+            height: 102px;
+            margin: 0 auto;
+        }
+
+        #con .con-list h3 {
+            margin-top: 30px;
+        }
+
+        #con .con-list p {
+            margin-top: 18px;
+            color: #9d9d9d;
+            font-size: 14px
+        }
+
+        #case {
+            background: #f8f8f8;
+        }
+
+        #case .container {
+            min-height: 460px;
+            overflow: hidden;
+        }
+
+        #case .con-title {
+            margin-top: 59px;
+        }
+
+        #case .case-list {
+            margin-top: 30px;
+        }
+
+        #case .case-list li {
+            float: left;
+            width: 340px;
+            margin: 0 10px;
+        }
+
+        #case .case-btn {
+            width: 137px;
+            height: 37px;
+            background: #66c5b4;
+            border-radius: 25px;
+            margin: 30px auto 0 auto;
+            line-height: 37px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #case .case-btn a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: white;
+        }
+        #news .news-con{
+            margin-top: 30px;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        #news .news-pic{
+            width: 234px;
+            float: left;
+        }
+        #news .news-con ul{
+            float: left;
+            width: 826px;
+            margin-left: 20px;
+        }
+        #news .news-date{
+            width: 71px;
+            height: 77px;
+            border-right: 1px solid #e3e3e3;
+            text-align: center;
+        }
+        #news .news-date i{
+            color: #66c5b4;
+            font-size: 39px;
+            display: block;
+            font-weight: bold;
+        }
+        #news .news-date span{
+            color: #999999;
+            font-size: 20px;
+
+        }
+        #news .news-news p{
+            color: #a4a4a4;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        #news .news-con ul li{
+            width: 50%;
+            float: left;
+            margin-bottom: 40px;
+        }
+        #news .news-news{
+            width: 310px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="head" class="container">
+    <div class="head_logo l">
+        <img src="img/logo.png" alt="博文尚美">
+    </div>
+    <ul class="head_menu r">
+        <li><a href="#"><span>首页</span></a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">客户案例</a></li>
+        <li><a href="#">服务项目</a></li>
+        <li><a href="#">新闻资讯</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</div>
+<div id="banner" class="container-fluid">
+    <ul class="banner-list">
+        <li class="active" style="background-image: url(img/banner.jpg)">
+            <a href="#"></a>
+        </li>
+        <li style="background-image: url(img/banner.jpg)">
+            <a href="#"></a>
+        </li>
+        <li style="background-image: url(img/banner.jpg)">
+            <a href="#"></a>
+        </li>
+        <li style="background-image: url(img/banner.jpg)">
+            <a href="#"></a>
+        </li>
+    </ul>
+    <ol class="banner-btn">
+        <li></li>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+<div id="con" class="container">
+    <div class="con-title"><h2>服务范围</h2>
+        <p>OUR SERVICES</p></div>
+    <ul class="con-list">
+        <li>
+            <div><img src="img/web1.png" alt=""></div>
+            <h3>1.WEB DESIGN</h3>
+            <p>企业品牌网站设计/手机网站制作<br>动画网站创意设计</p>
+        </li>
+        <li>
+            <div><img src="img/graphic1.png" alt=""></div>
+            <h3>1.WEB DESIGN</h3>
+            <p>企业品牌网站设计/手机网站制作<br>动画网站创意设计</p>
+        </li>
+        <li>
+            <div><img src="img/e-bussiness1.png" alt=""></div>
+            <h3>1.WEB DESIGN</h3>
+            <p>企业品牌网站设计/手机网站制作<br>动画网站创意设计</p>
+        </li>
+        <li>
+            <div><img src="img/mail1.png" alt=""></div>
+            <h3>1.WEB DESIGN</h3>
+            <p>企业品牌网站设计/手机网站制作<br>动画网站创意设计</p>
+        </li>
+    </ul>
+</div>
+<div id="case" class="container-fluid">
+    <div class="container">
+        <div class="con-title">
+            <h2>客户案例</h2>
+            <p>With the best professional technology,to design the best innovative web site</p>
+        </div>
+        <ul class="case-list clear">
+            <li><img src="img/20141121095528549.jpg" alt=""></li>
+            <li><img src="img/20141121095216750.jpg" alt=""></li>
+            <li><img src="img/20141121105856226.jpg" alt=""></li>
+        </ul>
+        <div class="case-btn"><a href="#">VIEW MORE</a></div>
+    </div>
+    <div id="news" class="container">
+        <div class="con-title">
+            <h2>最新资讯</h2>
+            <p>THE LATEST NEWS</p>
+        </div>
+        <div class="news-con">
+            <div class="news-pic"><a href="#"><img src="img/xs1.jpg" alt=""></a></div>
+            <ul>
+                <li>
+                   <div class="news-date l">
+                       <i>18</i>
+                       <span> Aug</span>
+                   </div>
+                    <div class="news-news l">
+                        <h3>漳州西恩视觉婚纱摄影网站建设</h3>
+                        <p>漳州西恩视觉婚纱摄影隶属西恩视觉文明传播有限公司旗下婚纱摄影品牌，中国内著名摄影师东辉CHAN...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-date l">
+                        <i>18</i>
+                        <span> Aug</span>
+                    </div>
+                    <div class="news-news l">
+                        <h3>漳州西恩视觉婚纱摄影网站建设</h3>
+                        <p>漳州西恩视觉婚纱摄影隶属西恩视觉文明传播有限公司旗下婚纱摄影品牌，中国内著名摄影师东辉CHAN...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-date l">
+                        <i>18</i>
+                        <span> Aug</span>
+                    </div>
+                    <div class="news-news l">
+                        <h3>漳州西恩视觉婚纱摄影网站建设</h3>
+                        <p>漳州西恩视觉婚纱摄影隶属西恩视觉文明传播有限公司旗下婚纱摄影品牌，中国内著名摄影师东辉CHAN...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-date l">
+                        <i>18</i>
+                        <span> Aug</span>
+                    </div>
+                    <div class="news-news l">
+                        <h3>漳州西恩视觉婚纱摄影网站建设</h3>
+                        <p>漳州西恩视觉婚纱摄影隶属西恩视觉文明传播有限公司旗下婚纱摄影品牌，中国内著名摄影师东辉CHAN...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div id="foot" class="container-fluid">
+        <div class="container">
+            <p class="l">ContactCopyright 2006- 2014 Bowenshangmei Culture All Rights Reserve</p>
+            <div class="r"><a href="#">Home</a>|<a href="#">About</a>|<a href="#">Portfolio</a>|<a href="#">Contact</a></div>
+        </div>
+    </div>
+</body>
+</html>
